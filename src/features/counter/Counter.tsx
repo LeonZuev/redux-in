@@ -5,6 +5,7 @@ import { RootState } from "../../store";
 export default function Counter(): JSX.Element {
   const dispatch = useDispatch();
   const value = useSelector((globalState: RootState) => globalState.counter.value)
+
   return (
     <div>
       <button
@@ -12,7 +13,7 @@ export default function Counter(): JSX.Element {
         onClick={() => dispatch<Action>({ type: 'counter/minus', payload: 1 })}>
         -1
       </button>{' '}
-      {value}
+      {value}{' '}
       <button
         type="button"
         onClick={() => dispatch<Action>({ type: 'counter/plus', payload: 1 })}>

@@ -10,8 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   // <React.StrictMode>  // строгий режим
-    <Provider store={store}>
+  <Provider store={store}>
     <App />
-    </Provider>
+  </Provider>
   // </React.StrictMode> // строгий режим
 );
