@@ -1,4 +1,4 @@
 export default interface AuthSate {
-  login?: string; // ? - variability
+  login?: string; // ? - может прилететь пустой объект, приложение будет работать
   password?: string;
 }
