@@ -9,23 +9,19 @@ function App() {
   const value = useSelector((state: RootState) => state.counter.value)
   const user = useSelector((state: RootState) => state.auth.login)
   return (
-    <div className="App">
-      <h1>Value [{value}]</h1>
-      <Counter />
+    <div className='App'>
+      <h1>Value: {value}</h1>
       <br />
-      {/* условный рендеринг user &&  */}
-      {user && (<h2>Hello, {user}</h2>)}
-      <Login />
-      <br />
-      <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='/counter' element={<Counter />} />
-      </Routes>
+      {user && (<h2>Hello, {user} !</h2>)}
       <nav>
-        <br />
         <Link to="/login">Login</Link>{" "}
         <Link to="/counter">Counter</Link>
       </nav>
+      <br/>
+      <Routes>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/counter' element={<Counter />}/>
+      </Routes>
     </div>
   );
 }
