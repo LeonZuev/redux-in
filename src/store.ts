@@ -1,8 +1,7 @@
-import { type } from "os";
 import { combineReducers, createStore } from "redux";
 
 const store = createStore(combineReducers({
-    
+    counter: CounterReducer
 }))
 
 export default store
