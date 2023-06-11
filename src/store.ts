@@ -1,7 +1,8 @@
 import { combineReducers, createStore } from "redux";
+import counterReducer from "./features/counter/counterReducer";
 
 const store = createStore(combineReducers({
-    counter: CounterReducer
+    counter: counterReducer
 }))
 
 export default store
