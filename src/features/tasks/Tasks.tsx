@@ -40,9 +40,9 @@ export default function Tasks(): JSX.Element {
                 Delete
               </button>
               <form onSubmit={
-                (event)=>{
+                (event) => {
                   event.preventDefault();
-                  dispatch({ type: 'tasks/edit', payload: { id: el.id, title}});
+                  dispatch({ type: 'tasks/edit', payload: { id: el.id, title } });
                   setTitle('');
                 }
               }>
@@ -58,7 +58,6 @@ export default function Tasks(): JSX.Element {
           ))
         }
       </ul>
-
     </>
   );
 }
